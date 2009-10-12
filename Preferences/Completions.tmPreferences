@@ -208,7 +208,9 @@
 				<key>name</key>
 				<string>TM_COMPLETIONS</string>
 				<key>value</key>
-				<string>$$('selectors:mixed')
+				<string>
+${TM_COMPLETIONS}
+$$('selectors:mixed')
 $('el:mixed')
 $E('selector:string')
 $exec('text:string')

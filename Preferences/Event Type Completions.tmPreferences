@@ -5,7 +5,7 @@
 	<key>name</key>
 	<string>Event Type Completions</string>
 	<key>scope</key>
-	<string>source.js.mootools meta.complete.event-type, source.js.mootools string.quoted.single.event-type.js.mootools, source.js.mootools string.quoted.double.event-type.js.mootools</string>
+	<string>source.js.mootools meta.complete.event-type, source.js.mootools string.quoted.single.event-type.js.mootools, source.js.mootools string.quoted.double.event-type.js.mootools, source.js.mootools meta.function-call.method.with-arguments.addEvents string.quoted punctuation.definition.string.end</string>
 	<key>settings</key>
 	<dict>
 		<key>completions</key>
@@ -47,7 +47,7 @@
 			<string>mousewheel</string>
 		</array>
 		<key>disableDefaultCompletion</key>
-		<integer>1</integer>
+		<integer>0</integer>
 		<key>shellVariables</key>
 		<array>
 			<dict>
