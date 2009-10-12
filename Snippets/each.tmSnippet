@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>content</key>
+	<string>each(function(${1:item}${10:,${11:index}}${20:,${21:object}}){$0}${100:,this});</string>
+	<key>name</key>
+	<string>each</string>
+	<key>scope</key>
+	<string>source.js.mootools</string>
+	<key>tabTrigger</key>
+	<string>e</string>
+	<key>uuid</key>
+	<string>6384D26D-3CE4-4A17-80BB-702B8AEC930F</string>
+</dict>
+</plist>

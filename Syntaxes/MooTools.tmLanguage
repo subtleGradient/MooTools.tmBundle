@@ -7,17 +7,27 @@
 MooTools Framework by Valerio Proietti. 
 http://mootools.net
 
-MooTools 1.2 TextMate Bundle
-
-Based on the initial MooTools TextMate bundle by Joe Maller.</string>
+MooTools 1.2 TextMate Bundle</string>
+	<key>firstLineMatch</key>
+	<string>(?i)^.*?require.*?mootools</string>
 	<key>foldingStartMarker</key>
-	<string>(^.*{[^}]*$|^.*\([^\)]*$|^.*/\*(?!.*\*/).*$)</string>
+	<string>(?x)^
+			#   Yes *+      Open  (         Blank |Comments                                        | (No Paren | String) | String                                                        | (Nested Parens             )  )*+
+			(?&gt; \g&lt;yesS&gt;*+  \[    (?&lt;yesS&gt;  (?!.) |//.*+|/\*((?!\*/).)++(\*/|$)|(^)((?!/\*).)*(\*/)| (?&lt;noS&gt;[^\[\]'"/]) | (?&lt;str&gt; '(\\'|[^'])*+' | "(\\"|[^"])*+" | /(\\/|[^/])*+/) | (?&lt;squar&gt; \[ \g&lt;yesS&gt;*+ \] )  )*+
+			|   \g&lt;yesR&gt;*+  \(    (?&lt;yesR&gt;  (?!.) |//.*+|/\*((?!\*/).)++(\*/|$)|(^)((?!/\*).)*(\*/)| (?&lt;noR&gt;[^\(\)'"/]) | \g&lt;str&gt;                                                       | (?&lt;round&gt; \( \g&lt;yesR&gt;*+ \) )  )*+
+			|   \g&lt;yesC&gt;*+  \{    (?&lt;yesC&gt;  (?!.) |//.*+|/\*((?!\*/).)++(\*/|$)|(^)((?!/\*).)*(\*/)| (?&lt;noC&gt;[^\{\}'"/]) | \g&lt;str&gt;                                                       | (?&lt;curly&gt; \{ \g&lt;yesC&gt;*+ \} )  )*+
+		)$</string>
 	<key>foldingStopMarker</key>
-	<string>(^\s*\}|^\s*\)|^(?!.*/\*).*\*/)</string>
+	<string>(?x)^
+			#                     (         Blank |Comments                                        | (No Paren | String) | String                                                        | (Nested Parens             )  )*+  Close  Yes *+
+			(?&gt;                   (?&lt;yesS&gt;  (?!.) |//.*+|/\*((?!\*/).)++(\*/|$)|(^)((?!/\*).)*(\*/)| (?&lt;noS&gt;[^\[\]'"/]) | (?&lt;str&gt; '(\\'|[^'])*+' | "(\\"|[^"])*+" | /(\\/|[^/])*+/) | (?&lt;squar&gt; \[ \g&lt;yesS&gt;*+ \] )  )*+  \]     \g&lt;yesS&gt;*+
+			|                     (?&lt;yesR&gt;  (?!.) |//.*+|/\*((?!\*/).)++(\*/|$)|(^)((?!/\*).)*(\*/)| (?&lt;noR&gt;[^\(\)'"/]) | \g&lt;str&gt;                                                       | (?&lt;round&gt; \( \g&lt;yesR&gt;*+ \) )  )*+  \)     \g&lt;yesR&gt;*+
+			|                     (?&lt;yesC&gt;  (?!.) |//.*+|/\*((?!\*/).)++(\*/|$)|(^)((?!/\*).)*(\*/)| (?&lt;noC&gt;[^\{\}'"/]) | \g&lt;str&gt;                                                       | (?&lt;curly&gt; \{ \g&lt;yesC&gt;*+ \} )  )*+  \}     \g&lt;yesC&gt;*+
+		)$</string>
 	<key>keyEquivalent</key>
 	<string>^~J</string>
 	<key>name</key>
-	<string>MooTools</string>
+	<string>MooTools Javascript</string>
 	<key>patterns</key>
 	<array>
 		<dict>
@@ -26,7 +36,7 @@ Based on the initial MooTools TextMate bundle by Joe Maller.</string>
 			((
 			 \$\$
 			|\$E
-			|\.getElements
+			|\.getElements?
 			|\.match
 			))
 			(\()\s*
@@ -55,6 +65,8 @@ Based on the initial MooTools TextMate bundle by Joe Maller.</string>
 			</dict>
 			<key>contentName</key>
 			<string>meta.selector.css</string>
+			<key>disabled</key>
+			<integer>1</integer>
 			<key>end</key>
 			<string>(?&lt;=['"])\s*(\))</string>
 			<key>endCaptures</key>
@@ -166,6 +178,8 @@ Based on the initial MooTools TextMate bundle by Joe Maller.</string>
 			</dict>
 			<key>comment</key>
 			<string>Matches stuff like ".addEvents("eventType", ...)"</string>
+			<key>disabled</key>
+			<integer>1</integer>
 			<key>end</key>
 			<string>\)</string>
 			<key>endCaptures</key>
@@ -217,6 +231,8 @@ Based on the initial MooTools TextMate bundle by Joe Maller.</string>
 			</dict>
 			<key>comment</key>
 			<string>Matches stuff like ".addEvent("eventType", ...)"</string>
+			<key>disabled</key>
+			<integer>1</integer>
 			<key>end</key>
 			<string>\)</string>
 			<key>endCaptures</key>
@@ -289,6 +305,10 @@ Based on the initial MooTools TextMate bundle by Joe Maller.</string>
 			<string>\b(Window|Event|Document|Element|Elements|Class|Hash|Array|String|RegExp|Native|Client|Chain|Options|Events|Garbage|Number|String|Function|Ajax|Cookie|Json|XHR|Swiff|Fx)\b</string>
 			<key>name</key>
 			<string>support.class.mootools.js.mootools</string>
+		</dict>
+		<dict>
+			<key>include</key>
+			<string>#event-type-strings</string>
 		</dict>
 		<dict>
 			<key>include</key>

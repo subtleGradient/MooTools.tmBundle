@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>name</key>
+	<string>Environment</string>
+	<key>settings</key>
+	<dict>
+		<key>shellVariables</key>
+		<array>
+			<dict>
+				<key>name</key>
+				<string>TM_WEB_FRAMEWORK</string>
+				<key>value</key>
+				<string>http://ajax.googleapis.com/ajax/libs/mootools/1.2.3/mootools.js</string>
+			</dict>
+		</array>
+	</dict>
+	<key>uuid</key>
+	<string>231B8B9D-AD5D-4282-A388-BCA26769C030</string>
+</dict>
+</plist>

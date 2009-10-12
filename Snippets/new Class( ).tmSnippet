@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>content</key>
+	<string>var ${1:MyClass} = new Class({
+	
+${10:	Extends: $5,
+	
+}${20:	Implements: ${30/.*(,).*|(.+)/(?1:[)/}${30:Options, Events}${30/.*(,).*|(.+)/(?1:])/},
+	
+}${30/.*(Options).*|(.+)/(?1:	options\:{},
+	
+)/}	initialize: function(${100:${30/.*(Options).*|(.+)/(?1:options)/}}){
+${100/.*(options).*|.+/(?1:		this.setOptions(options\);
+)/}
+	}$0
+	
+});</string>
+	<key>name</key>
+	<string>new Class( )</string>
+	<key>scope</key>
+	<string>source.js.mootools</string>
+	<key>tabTrigger</key>
+	<string>cla</string>
+	<key>uuid</key>
+	<string>E002FE55-251C-4084-844A-F32A2235F82F</string>
+</dict>
+</plist>
