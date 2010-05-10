@@ -3,13 +3,13 @@
 <plist version="1.0">
 <dict>
 	<key>content</key>
-	<string>window.addEvent('domready',function(){
+	<string>document.addEvent('domready',function(){
 
 	$0${TM_SELECTED_TEXT:
 }
 });</string>
 	<key>name</key>
-	<string>window.domready</string>
+	<string>document.domready</string>
 	<key>scope</key>
 	<string>source.js.mootools</string>
 	<key>tabTrigger</key>
