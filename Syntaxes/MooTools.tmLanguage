@@ -32,6 +32,49 @@ MooTools 1.2 TextMate Bundle</string>
 	<array>
 		<dict>
 			<key>begin</key>
+			<string>(?x)^/\* &lt;  ([^&lt;&gt;]+) &gt;     $</string>
+			<key>captures</key>
+			<dict>
+				<key>0</key>
+				<dict>
+					<key>name</key>
+					<string>comment.line.embed.begin.js</string>
+				</dict>
+				<key>1</key>
+				<dict>
+					<key>name</key>
+					<string>entity.name.section.comment.embed.begin.js</string>
+				</dict>
+			</dict>
+			<key>contentName</key>
+			<string>source.js.embedded.comment</string>
+			<key>end</key>
+			<string>(?x)  ^    &lt;/ ([^&lt;&gt;]+) &gt; \*/ $</string>
+			<key>endCaptures</key>
+			<dict>
+				<key>0</key>
+				<dict>
+					<key>name</key>
+					<string>comment.line.embed.end.js</string>
+				</dict>
+				<key>1</key>
+				<dict>
+					<key>name</key>
+					<string>entity.name.section.comment.embed.end.js</string>
+				</dict>
+			</dict>
+			<key>name</key>
+			<string>meta.embedded.block.comment.js</string>
+			<key>patterns</key>
+			<array>
+				<dict>
+					<key>include</key>
+					<string>$base</string>
+				</dict>
+			</array>
+		</dict>
+		<dict>
+			<key>begin</key>
 			<string>(?x)
 			((
 			 \$\$
