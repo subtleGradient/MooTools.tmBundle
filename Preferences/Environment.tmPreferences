@@ -12,7 +12,7 @@
 				<key>name</key>
 				<string>TM_WEB_FRAMEWORK</string>
 				<key>value</key>
-				<string>http://ajax.googleapis.com/ajax/libs/mootools/1.2.3/mootools.js</string>
+				<string>http://ajax.googleapis.com/ajax/libs/mootools/1.2.4/mootools.js</string>
 			</dict>
 		</array>
 	</dict>
