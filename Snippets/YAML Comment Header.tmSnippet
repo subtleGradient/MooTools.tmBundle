@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>content</key>
+	<string>/*
+---
+provides: ${1/.*(,).*|(.+)/(?1:[)/}${1:${TM_FILENAME:Thing}}${1/.*(,).*|(.+)/(?1:])/}
+description: ${20:$1 will rock your socks}
+requires: ${30/.*(,).*|(.+)/(?1:[)/}${30:MooTools}${30/.*(,).*|(.+)/(?1:])/}
+
+author: ${40:${TM_FULLNAME:Your Name}}
+copyright: ${50:${TM_LICENSE:`date "+%Y"` ${TM_FULLNAME:Your Name}}}
+license: ${100:${TM_LICENSE:All Rights Reserved}}
+...
+*/
+</string>
+	<key>name</key>
+	<string>YAML Comment Header</string>
+	<key>scope</key>
+	<string>source.js</string>
+	<key>tabTrigger</key>
+	<string>---</string>
+	<key>uuid</key>
+	<string>89047E1F-5F7D-40A9-B340-2F2CB87B380E</string>
+</dict>
+</plist>
